@@ -1,0 +1,104 @@
+.calendar-head .calendar-title {
+    color: #103D5D;
+    margin-left: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.calendar-head {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar-head .calendar-nav button {
+    height: 100%;
+    margin: 0px 5px;
+}
+
+.calendar-day {
+    background-color: white;
+    outline: 1px solid gray;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    overflow: hidden;
+}
+
+/*
+.calendar-day:hover {
+    grid-row: span 2;
+    box-shadow: 6px 6px 2px 1px #FA6900;
+    z-index: 2;
+}
+*/
+
+.calendar-body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 150px;
+    grid-gap: 1px;
+}
+
+.calendar-day .day {
+    padding: 8px;
+    height: 48px;
+    width: 46px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #103D5DDD;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    left: -16px;
+    top: -15px;
+}
+
+.day-elements .day-event, .day-elements .day-add-event {
+    box-sizing: border-box;
+    border-top: 6px solid lightgrey;
+    background-color: white;
+    color: black;
+    padding: 0px 6px 6px 6px;
+    margin-bottom: 6px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.03), 0 4px 8px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.03), 0 16px 32px rgba(0, 0, 0, 0.03), 0 32px 64px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.day-elements .day-add-event {
+    border: dashed 2px black;
+    padding: 6px;
+    background: #ffffff00;
+
+}
+
+.day-elements {
+    margin-top: 5px !important;
+}
+
+.calendar-day-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar-day-header .events {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.calendar-day.current-day {
+    border: 1px solid #FA6900;
+}
